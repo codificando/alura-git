@@ -1,0 +1,57 @@
+git init = inicializa o repositório no git, com isto, o git passa a visualizar todas as alterações feitas na pasta (enxerga, mas não monitora)
+
+git status = mostra o estado dos arquivos (o que foi alterado, excluído, etc)
+
+git rm --cached = com isto o git para de monitorar o arquivo
+
+git add . = o git passa a monitorar os arquivos
+
+git commit -m"" = envia para o servidor com a frase
+
+git log = lista as alterações enviadas pelo "git commit"
+
+git log --online = lista em versão resumida
+
+git log -p = apresenta as alterações realizadas nos arquivos
+*outras opçãoes de log: https://devhints.io/git-log
+
+git init --bare = informa o git que aquela determinada pasta será o repositório remoto, ou seja, um servidor local onde será possível enviar a alteração e será visível para outras pessoas.
+**Foi  criada uma pasta a parte
+
+git remote = mostra os repositórios remotos que meu repositório conhece
+
+git remote add local "link do servidor, pode ser caminho do próprio computar ou link externo"
+
+git push "nome do remote do passo acima" "branch" = envia as alterações para o servidor remoto
+
+git pull "nome" "branch"= pega as informações do servidor remoto
+
+git branch = visualiza as branch criadas
+
+git branch "nome" = cria uma nova branch
+
+git checkout "nome da branch criada" = troca a branch
+
+git checkout -b  "nome da branch a ser criada" = cria e já troca a branch
+
+git merge "nome da branch" = quando estiver na MASTER e precisar puxar a atualização de uma outra branch
+
+Que o git merge gera um novo commit, informando que houve uma mescla entre duas branches;
+
+git rebase "nome branch" = pega o branch 'titulo' e atualiza no branch do MASTER , mas mantém o útlimo trabalho que foi feito, ou seja, o branch tiutlo é adicionada antes
+
+O merge junta os trabalhos e gera um merge commit. O rebase aplica os commits de outra branch na branch atual.
+
+git checkout -- "file" = desfaz a alteração no arquivo (antes de executar o git add)
+
+git restore --staged "file" = desfaz a alteração no arquivo depois de executar o git add
+
+git revert "hash do commit" = desfaz a alteração no arquivo depois de executar o git commit
+
+git statsh = armazena a alteração temporariamente
+
+git diff <hash>...<hash-2> = visualiza as diferenças entre os commits conforme a hash
+
+tag = marca um ponto do sistema que não pode ser modificado
+
+git tag -a "nome da tag" -m"mensagem desejada" = cria a tag desejada
